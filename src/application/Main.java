@@ -1,13 +1,33 @@
 package application;
 
+import devices.MultifunctionalPrinter;
+import devices.Printer;
 import devices.Scanner;
 
 public class Main {
 	public static void main(String[] args) {
 		
-		Scanner sc1 = new Scanner("Olá Mundo");
+		Scanner scanner = new Scanner("Olá Mundo");
+		Printer printer = new Printer("Toriel");
+		MultifunctionalPrinter multifunctionalPrinter = new MultifunctionalPrinter("Revenge of the Fallen");
 		
-		sc1.scan(sc1.processDoc());
+		System.out.println("----------------------------------- General Devices System v1.1a -----------------------------------\n");
 		
+		System.out.println("\n------------------------------------------ Operation Start -----------------------------------------\n");
+		scanner.scan(scanner.processDoc());
+		System.out.println("\n------------------------------------------- Operation End ------------------------------------------\n");
+		
+		System.out.println("\n------------------------------------------ Operation Start -----------------------------------------\n");
+		printer.print(printer.processDoc());
+		System.out.println("\n------------------------------------------- Operation End ------------------------------------------\n");
+		
+		System.out.println("\n------------------------------------------ Operation Start -----------------------------------------\n");
+		multifunctionalPrinter.scan(multifunctionalPrinter.processDoc());
+		System.out.println("\n------------------------------------------- Operation End ------------------------------------------\n");
+		
+		System.out.println("\n------------------------------------------ Operation Start -----------------------------------------\n");
+		multifunctionalPrinter.print(multifunctionalPrinter.processDoc());
+		System.out.println("\n------------------------------------------- Operation End ------------------------------------------\n");
+
 	}
 }

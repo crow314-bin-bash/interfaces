@@ -11,12 +11,13 @@ public class Scanner extends Device implements Scannable {
 	
 	@Override
 	public String processDoc() {
-		System.out.println("Documento [" + doc + "] sendo processado, aguarde...");
+		System.out.println("O Scanner está processando o documento [" + doc + "], aguarde...");
 		return doc;
 	}
 	
+	@Override
 	public void scan(String doc) {
-		System.out.println("O documento [" + doc + "] foi scaneado certinho!");
+		System.out.println("O documento [" + doc + "] no Scanner foi scaneado!");
 		
 	}
 }

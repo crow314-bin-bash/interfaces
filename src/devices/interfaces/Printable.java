@@ -1,5 +1,5 @@
 package devices.interfaces;
 
 public interface Printable {
-	public String print(String doc);
+	public void print(String doc);
 }
